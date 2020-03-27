@@ -1,0 +1,15 @@
+{
+    "name": "Simple",
+    "type": "record",
+    "namespace": "de.ehmkah.avro.example",
+    "fields": [
+        {
+            "name": "foo",
+            "type": "string"
+        },
+        {
+            "name": "bar",
+            "type": "string"
+        }
+    ]
+}

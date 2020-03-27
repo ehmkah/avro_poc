@@ -1,0 +1,10 @@
+== Why does work with:
+
+* download avro-tools 1.9.1 (e.g. http://archive.apache.org/dist/avro/avro-1.9.1/java/avro-tools-1.9.1.jar)
+* go to `src/main/avro/example`
+* run avrotools `java -jar avro-tools-1.9.1.jar compile schema Simple.avsc Complex.avsc  .`
+
+== Why does it not work with:
+
+* `./gradlew assemble`
+
