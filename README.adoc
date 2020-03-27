@@ -6,5 +6,31 @@
 
 == Why does it not work with:
 
-* `./gradlew assemble`
+* `./gradlew assemble --debug --stacktrace`
 
+
+== What the reason might be
+
+Maybe definition of map in `Comple.avsc` is wrong and plugin can not detect correct order how to generate files.
+
+ {
+            "name": "fooComplex",
+            "type": {
+                "type": "map",
+                "values": {
+                    "type": "Simple"
+                }
+            }
+       }
+
+If I change the definition to
+
+ {
+    "name": "fooComplex",
+    "type": {
+        "type": "map",
+        "values": "Simple"
+    }
+}
+
+Than plugin works.
